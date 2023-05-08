@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Treasure Hunt</title>
+
+    </head>
+
+    <body>
+      <a-entity id="Island" gltf-model="#Island" position="10 -2 -150" rotation="0 90 0" scale="1 1 1">
+      </a-entity>
+
+        <a-scene id="scene" background="color:lightblue" inspector-plugin-recast>
+        </a-scene>
+        <a-box id="b1" material="height: 1000; metalness: 0.34" color="blue" geometry="depth: 400; height: 50; width: 5"
+        position="-76.79446 -8.30764 -164.16795"></a-box>
+      <a-box id="b2" material="height: 1000; metalness: 0.34" color="blue" geometry="depth: 400; height: 50; width: 5"
+        position="75.38341 -8.30764 -164.16795"></a-box>
+      <a-box id="b3" material="height: 1000; metalness: 0.34" color="blue" geometry="depth: 5; height: 50; width: 200"
+        position="-0.33183 -7.8421 -359.48732"></a-box>
+      <a-box id="b4" material="height: 1000; metalness: 0.34" color="blue" geometry="depth: 5; height: 50; width: 200"
+        position="-0.33183 -7.8421 31.16964"></a-box>
+
+        <a-plane material="src: #sand-texture; repeat: 100 100" width="100" height="100" rotation="-90 0 0"></a-plane>
+        <a-assets>
+          <img id="sand-texture" src="./Assets/Island/Sand.png">
+        </a-assets>
+
+        <a-plane material="src: Tree; repeat: 50 50" width="10" height="50"></a-plane>
+        <a-assets>
+          <img id="sand-texture" src="./Assets/Island/Tree.png">
+        </a-assets>
+
+        <a-plane material="src:Treasure" width="10" height="10" rotation="-90 0 0"></a-plane>
+        <a-assets>
+          <img id="Treasure" src="./Assets/Island/Chest.png">
+        </a-assets>
+
+        <a-entity id="timer" position="0 5 -7.1"
+        text="font: kelsonsans; align: center; width: 10; color: black; value: 00:00">
+      </a-entity>
+
+      <a-entity id="speed" position="4 -5 -7.16344" text="font: kelsonsans; width:10; height: 5;value: 10">
+        <a-entity id="unit" position="1 0 0" text="font: kelsonsans; width:10; height: 5; value: km/h"></a-entity>
+      </a-entity>
+
+      <a-entity id="move" position="-3.8 -5.7 -7.16344"
+        text="font: kelsonsans; width:5; height: 2;value: 'Up Arrow Key' ">
+      </a-entity>
+
+      <a-entity id="stop" position="-6.5 -5.7 -7.16344"
+        text="font: kelsonsans; width:5; height: 2;value: 'Spacebar key' ">
+      </a-entity>
+
+      <a-entity id="over" position="1.7 1 -3"
+        text="font: kelsonsans; color: black; width:5; height: 5; value: Keep Trying :)" visible="false">
+      </a-entity>
+        </body>
+</html>
